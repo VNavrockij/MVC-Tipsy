@@ -48,7 +48,7 @@
                                                             <action selector="tipChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lew-PF-vZS"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7y6-Kf-yF0">
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7y6-Kf-yF0">
                                                         <rect key="frame" x="95.333333333333329" y="0.0" width="162.33333333333337" height="54"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="54" id="i5j-Nk-Hb1"/>
@@ -62,7 +62,7 @@
                                                             <action selector="tipChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cU4-js-jci"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UtR-dU-EKt">
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UtR-dU-EKt">
                                                         <rect key="frame" x="257.66666666666669" y="0.0" width="95.333333333333314" height="54"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="54" id="uDJ-4b-7bJ"/>
@@ -201,6 +201,7 @@
                         <outlet property="billTextField" destination="wcN-ka-Q4F" id="WiQ-Ai-76E"/>
                         <outlet property="splitNumberLabel" destination="bSy-Yc-886" id="iu9-qt-XRW"/>
                         <outlet property="tenPctButton" destination="7y6-Kf-yF0" id="ECs-zv-hSE"/>
+                        <outlet property="twentyPctButton" destination="UtR-dU-EKt" id="JIe-Vc-hpi"/>
                         <outlet property="zeroPctButton" destination="XzR-0E-Xf7" id="c7z-wd-NRc"/>
                     </connections>
                 </viewController>
@@ -208,10 +209,10 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="117.85714285714285"/>
         </scene>
-        <!--View Controller-->
+        <!--Results View Controller-->
         <scene sceneID="bJV-Cc-sXH">
             <objects>
-                <viewController id="Dnf-m2-FPm" sceneMemberID="viewController">
+                <viewController id="Dnf-m2-FPm" customClass="ResultsViewController" customModule="Tipsy_MVC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DNW-gk-FsX">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -263,6 +264,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10f"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="recalculatePressed:" destination="Dnf-m2-FPm" eventType="touchUpInside" id="wwS-Fp-6F3"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Split between 2 people, with 10% tip." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGt-bn-sCv">
                                 <rect key="frame" x="50" y="305" width="293" height="117"/>
@@ -287,6 +291,10 @@
                             <constraint firstItem="ZCe-Te-efL" firstAttribute="top" secondItem="DNW-gk-FsX" secondAttribute="top" id="zdY-59-9ry"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="settingsLabel" destination="HGt-bn-sCv" id="kpV-d3-dzl"/>
+                        <outlet property="totalLabel" destination="uLJ-ii-hft" id="BFf-i9-BBc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uLi-Eb-NGd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

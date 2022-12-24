@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA1EF179295727F8009884F1 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1EF178295727F8009884F1 /* ResultsViewController.swift */; };
 		FA90E4A52951FBCC00EB82F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA90E4A42951FBCC00EB82F7 /* AppDelegate.swift */; };
 		FA90E4A72951FBCC00EB82F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA90E4A62951FBCC00EB82F7 /* SceneDelegate.swift */; };
 		FA90E4A92951FBCC00EB82F7 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA90E4A82951FBCC00EB82F7 /* CalculatorViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA1EF178295727F8009884F1 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		FA90E4A12951FBCC00EB82F7 /* Tipsy-MVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tipsy-MVC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA90E4A42951FBCC00EB82F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA90E4A62951FBCC00EB82F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +39,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA1EF177295727E3009884F1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA90E4A82951FBCC00EB82F7 /* CalculatorViewController.swift */,
+				FA1EF178295727F8009884F1 /* ResultsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		FA90E4982951FBCC00EB82F7 = {
 			isa = PBXGroup;
 			children = (
@@ -58,13 +69,29 @@
 			children = (
 				FA90E4A42951FBCC00EB82F7 /* AppDelegate.swift */,
 				FA90E4A62951FBCC00EB82F7 /* SceneDelegate.swift */,
-				FA90E4A82951FBCC00EB82F7 /* CalculatorViewController.swift */,
-				FA90E4AA2951FBCC00EB82F7 /* Main.storyboard */,
+				FAB921C4295729A600E7E20D /* Model */,
+				FA1EF177295727E3009884F1 /* Controllers */,
+				FAB921C32957299900E7E20D /* View */,
 				FA90E4AD2951FBCE00EB82F7 /* Assets.xcassets */,
 				FA90E4AF2951FBCE00EB82F7 /* LaunchScreen.storyboard */,
 				FA90E4B22951FBCE00EB82F7 /* Info.plist */,
 			);
 			path = "Tipsy-MVC";
+			sourceTree = "<group>";
+		};
+		FAB921C32957299900E7E20D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA90E4AA2951FBCC00EB82F7 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FAB921C4295729A600E7E20D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +168,7 @@
 				FA90E4A92951FBCC00EB82F7 /* CalculatorViewController.swift in Sources */,
 				FA90E4A52951FBCC00EB82F7 /* AppDelegate.swift in Sources */,
 				FA90E4A72951FBCC00EB82F7 /* SceneDelegate.swift in Sources */,
+				FA1EF179295727F8009884F1 /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
