@@ -13,9 +13,17 @@ class ResultsViewController: UIViewController {
     
     @IBOutlet weak var settingsLabel: UILabel!
     
+    var resultLabel: Float = 0.0
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        totalLabel.text = String(format: "%.2f", resultLabel)
+    }
     
     
     @IBAction func recalculatePressed(_ sender: UIButton) {
+        self.dismiss(animated: true)
     }
     
 }
